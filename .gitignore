@@ -203,6 +203,14 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# AIrPPG local data and generated artifacts
+data/
+datasets/UBFC_DATASET/*
+artifacts/
+models/*.task
+*_overlay.mp4
+*_roi_overlay.mp4
+
 # Ruff stuff:
 .ruff_cache/
 
@@ -216,3 +224,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+dataset
+models/*
