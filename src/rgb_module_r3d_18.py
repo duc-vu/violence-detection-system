@@ -4,7 +4,6 @@ import torch
 import torch.nn as nn
 from torchvision.models.video import r3d_18
 
-# Định nghĩa lại class cấu trúc mạng giống hệt file model.py của repo
 class FightDetector(nn.Module):
     def __init__(self, num_classes=2):
         super().__init__()
@@ -74,7 +73,7 @@ class RGBExtractor:
 
 if __name__ == "__main__":
     # Truyền file checkpoint vừa tải về vào đây
-    extractor = RGBExtractor(checkpoint_path="model_r3d_18.pth") 
+    extractor = RGBExtractor(checkpoint_path="model_train.pth") 
 
     # Giả lập 16 frame ảnh để test hàm predict
     mock_frames = [torch.rand(3, 224, 224) for _ in range(16)]
